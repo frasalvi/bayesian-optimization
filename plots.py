@@ -89,17 +89,17 @@ def visualize_rastrigin_3d():
 
 
 def plot_w_CI(BO_losses, GD_losses, max_num_iterations, title, xlabel, ylabel, figname):
-    """
+    '''
        Helper for plotting losses from bayesian optimization compared to random initialization
        
-       parameters:
+       Args:
            * BO_losses: numpy array with shape (num_trials, num_iterations), raw gradient descent losses of experiment
            * GD_losses: numpy array with shape (num_trials, num_iterations), raw gradient descent losses of experiment
            * title: str, title of plot
            * xlabel: str, x-label of plot
            * ylabel: str, y-label of plot
            * figname: str, path to save image
-    """
+    '''
     
     # Means
     mean_BO_losses = np.mean(BO_losses, axis=1)
@@ -129,10 +129,10 @@ def plot_w_CI(BO_losses, GD_losses, max_num_iterations, title, xlabel, ylabel, f
     plt.savefig(figname, bbox_inches='tight')
 
 def plot_w_CI_subplot(BO_losses, GD_losses, max_num_iterations, main_title, titles, xlabels, ylabels, figname):
-    """
+    '''
        Helper for plotting several settings of bayesian optimization compared to random initialization
        
-       parameters:
+       Args:
            * BO_losses: list of numpy arrays with shape (num_trials, num_iterations), raw gradient descent losses of experiment
            * GD_losses: list of numpy arrays with shape (num_trials, num_iterations), raw gradient descent losses of experiment
            * main_title: Title for entire figure
@@ -140,7 +140,7 @@ def plot_w_CI_subplot(BO_losses, GD_losses, max_num_iterations, main_title, titl
            * xlabel: list of str, x-label of each subplot (note only bottom is displayed)
            * ylabel: list of str, y-label of each subplot
            * figname: str, path to save image
-    """
+    '''
     
     # Means
     fig, ax = plt.subplots(len(BO_losses), figsize=(8,8))

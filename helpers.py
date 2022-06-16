@@ -97,36 +97,3 @@ def gradient_descent(loss, initial_x, initial_y, learning_rate, max_iters, verbo
                   bi=iteration, ti=max_iters - 1, l=objective))
     return objectives, xs
 
-# def gradient_descent(function, initial_x, initial_y, learning_rate, max_iters, print_p=True):
-#     """Perform gradient descent on input function
-       
-#        parameters:
-#            * function: function class with __call__ and grad methods, the objective to run GD on
-#            * initial_x: float, Starting point x
-#            * initial_y: float, Starting point y
-#            * learning_rate: float, learning rate of GD
-#            * max_iters: int, What number of iterations to run GD for
-#            * print_p: bool, to print status or not
-#     """
-    
-#     xs = [[initial_x, initial_y]]  # parameters after each update 
-#     objectives = []  # loss values after each update
-#     x = initial_x
-#     y = initial_y
-    
-#     for iteration in range(max_iters):
-#         gradx, grady = function.grad(x, y)
-
-#         # update x through the stochastic gradient update
-#         x -= learning_rate * gradx
-#         y -= learning_rate * grady
-
-#         # store x and objective
-#         xs.append([x, y])
-#         objective = function(x, y)
-#         objectives.append(objective)
-        
-#         if iteration % 100 == 0 and print_p:
-#             print("GD({bi:04d}/{ti:04d}): objective = {l:}".format(
-#                   bi=iteration, ti=max_iters - 1, l=objective))
-#     return objectives, xs

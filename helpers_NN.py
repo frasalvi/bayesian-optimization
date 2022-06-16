@@ -1,10 +1,11 @@
-
 import torch
 from torch import nn
 
 
 class Net(nn.Module):
-    # Neural network class with 3 input nodes, a hidden layer of size 3 and a single output
+    '''
+    Neural network class with 3 input nodes, a hidden layer of size 3 and a single output
+    '''
 
     def __init__(self, n_features):
         super(Net, self).__init__()
@@ -18,7 +19,9 @@ class Net(nn.Module):
 
 
 def grad_descent(n, net, optimizer, criterion, X_train, y_train, X_test, y_test): 
-    # Function that takes n steps of gradient descent
+    '''
+    Function that takes n steps of gradient descent
+    '''
 
     list_train_loss = []
     list_test_loss = []
